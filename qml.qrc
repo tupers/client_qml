@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>image/black.jpg</file>
+        <file>LoginPage.qml</file>
+        <file>style/SubHeaderLabel.qml</file>
+        <file>style/Header.qml</file>
+    </qresource>
+</RCC>
