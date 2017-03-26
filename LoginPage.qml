@@ -6,6 +6,7 @@ import QtGraphicalEffects 1.0
 
 import "style"
 
+
 Component{
     Rectangle
     {
@@ -91,6 +92,7 @@ Component{
                 }
                 Button {
                     id: account_loginButton
+                    objectName: "account_loginButton"
                     width: 170
                     height: 50
                     text: qsTr("LogIn")
@@ -115,11 +117,11 @@ Component{
             width: 130+parent.width*0.1
             spacing:10
             model:ListModel{
-                ListElement{name:"192.168.1.224";type:"1"}
-                ListElement{name:"test2";type:"2"}
-                ListElement{name:"test3";type:"3"}
-                ListElement{name:"test4";type:"4"}
-                ListElement{name:"test5";type:"5"}
+                ListElement{ip:"192.168.1.224";type:"1"}
+                ListElement{ip:"test2";type:"2"}
+                ListElement{ip:"test3";type:"3"}
+                ListElement{ip:"test4";type:"4"}
+                ListElement{ip:"test5";type:"5"}
             }
             delegate: Component{
                 RowLayout{
@@ -128,7 +130,7 @@ Component{
                     width: parent.width
                     spacing: 5
                     SubHeaderLabel{
-                        text:name
+                        text:ip
                         color:(mouse_area.containsMouse||listElementLayout.ListView.isCurrentItem)?"white":"#323232"
                     }
                     states: [
@@ -148,7 +150,7 @@ Component{
                         id:mouse_area
                         anchors.fill: parent
                         onClicked: {listElementLayout.ListView.view.currentIndex=index
-                            account_specifiedIPnameField.text=name}
+                            account_specifiedIPnameField.text=ip}
                         hoverEnabled: true
                         }
                 }
