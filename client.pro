@@ -3,7 +3,10 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    clientservice.cpp
+    clientservice.cpp \
+    utils_tcpclient.cpp \
+    service.cpp \
+    service_account.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,4 +35,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES +=
 
 HEADERS += \
-    clientservice.h
+    clientservice.h \
+    utils_tcpclient.h \
+    ezstream.h \
+    service.h \
+    service_account.h

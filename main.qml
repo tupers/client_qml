@@ -12,9 +12,8 @@ ApplicationWindow {
 //    color: "#212121"
     flags: Qt.FramelessWindowHint|Qt.Window
     visible: true
-    width: 960
+    width: 1152
     height: 720
-    title: qsTr("Hello World")
 
     background: Image{
         id:mainBackGround
@@ -101,11 +100,18 @@ ApplicationWindow {
     }
     StackView{
         id: mainStackView
+        objectName: "mainStackView"
         anchors.fill:parent
         initialItem: loginPage
         LoginPage {
             id: loginPage
+            objectName: "loginPage"
         }
+        ContextPage {
+            id: contextPage
+            objectName: "contextPage"
+        }
+
 //        Component{
 //            id:contentPage
 //            ContentPage{

@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "service_account.h"
+
 class clientService : public QObject
 {
     Q_OBJECT
@@ -15,6 +17,7 @@ public slots:
 
 private:
     QObject* root;
+    service_account* accountService;
 
 };
 

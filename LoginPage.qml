@@ -26,10 +26,9 @@ Component{
 
         Rectangle{
             id:accout
-            width: 250
+            width: 270
             height: 330
             color:"#78323232"
-            radius: 10
             anchors.rightMargin: 50+parent.width*0.03
             anchors.topMargin: parent.height*0.3
             anchors.right: parent.right
@@ -42,11 +41,11 @@ Component{
                 anchors.bottomMargin: 20
                 anchors.topMargin: 20
                 anchors.fill: parent
-                spacing: 0
+                spacing: -20
 
                 ColumnLayout {
                     id: account_nameLayout
-                    spacing: 0
+                    spacing: 10
 
                     SubHeaderLabel {
                         id: account_nameLabel
@@ -55,39 +54,60 @@ Component{
 
                     TextField {
                         id: account_nameField
-                        width: 170
-                        color: "#ffffff"
+                        color: "black"
+                        font.pointSize: 13
                         Layout.fillWidth: true
+                        placeholderText:"name"
+                        padding:10
+                        background: Rectangle{
+                            height:parent.height-10
+                            color:"white"
+                            radius: 2
+                        }
                     }
 
                 }
 
                 ColumnLayout {
                     id: account_passwordLayout
-                    spacing: 0
+                    spacing: 10
                     SubHeaderLabel {
                         id: account_passwordLabel
                         text: "Password"
                     }
                     TextField {
                         id: account_passwordField
-                        width: 170
-                        color: "#ffffff"
+                        color: "black"
+                        font.pointSize: 13
                         Layout.fillWidth: true
+                        placeholderText:"password"
+                        padding:10
+                        background: Rectangle{
+                            height:parent.height-10
+                            color:"white"
+                            radius: 2
+                        }
                     }
                 }
                 ColumnLayout {
                     id: account_specifiedIPLayout
-                    spacing: 0
+                    spacing: 10
                     SubHeaderLabel {
                         id: account_specifiedIPLabel
                         text: "Specified IP"
                     }
                     TextField {
                         id: account_specifiedIPnameField
-                        width: 170
-                        color: "#ffffff"
+                        color: "black"
+                        font.pointSize: 13
                         Layout.fillWidth: true
+                        placeholderText:"specified IP"
+                        padding:10
+                        background: Rectangle{
+                            height:parent.height-10
+                            color:"white"
+                            radius: 2
+                        }
                     }
                 }
                 Button {
