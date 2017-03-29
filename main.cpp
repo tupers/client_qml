@@ -7,9 +7,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
-    clientService service;
+    qmlRegisterType<clientService>("qml.clientService",1,0,"ClientService");
     QQmlApplicationEngine engine;
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
-    service.initService(engine.rootObjects()[0]);
     return app.exec();
 }

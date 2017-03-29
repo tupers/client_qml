@@ -3,7 +3,9 @@ import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
+
 import "style"
+import qml.clientService 1.0
 
 ApplicationWindow {
     id:mainWindow
@@ -14,6 +16,10 @@ ApplicationWindow {
     visible: true
     width: 1152
     height: 720
+
+    ClientService{
+        id:clientService
+    }
 
     background: Image{
         id:mainBackGround
@@ -105,11 +111,9 @@ ApplicationWindow {
         initialItem: loginPage
         LoginPage {
             id: loginPage
-            objectName: "loginPage"
         }
         ContextPage {
             id: contextPage
-            objectName: "contextPage"
         }
 
 //        Component{

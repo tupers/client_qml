@@ -2,15 +2,11 @@
 
 clientService::clientService(QObject *parent) : QObject(parent)
 {
-
+    accountService = new service_account(this);
 }
 
-bool clientService::initService(QObject *obj)
+bool clientService::login(QString name, QString password)
 {
-    if(obj==NULL)
-        return false;
-    root = obj;
 
-    accountService = new service_account(root,this);
-
+    return true;
 }

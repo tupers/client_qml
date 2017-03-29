@@ -9,7 +9,7 @@ class service_account : public service
 {
     Q_OBJECT
 public:
-    explicit service_account(QObject* obj,QObject* parent=0);
+    explicit service_account(QObject* parent=0);
 public slots:
     void loginSuccess();
 private:

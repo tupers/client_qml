@@ -13,6 +13,7 @@ Component{
         color:"#00000000"
         width: loginPage.width
         height: loginPage.height
+//        anchors.fill:parent
         Header {
             id:loginHeader
             anchors.left: parent.left
@@ -121,11 +122,16 @@ Component{
                     padding: 20
                     rightPadding: 30
                     leftPadding: 30
+                    onClicked: {
+                        if(clientService.login(account_nameField.text,account_passwordField.test))
+                            mainStackView.push(contextPage);
+                    }
 
                 }
             }
 
         }
+
 
         ListView {
             id: scanList

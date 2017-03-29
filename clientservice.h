@@ -10,13 +10,12 @@ class clientService : public QObject
     Q_OBJECT
 public:
     explicit clientService(QObject *parent = 0);
-    bool initService(QObject* obj);
+    Q_INVOKABLE bool login(QString name,QString password);
 signals:
 
 public slots:
 
 private:
-    QObject* root;
     service_account* accountService;
 
 };
